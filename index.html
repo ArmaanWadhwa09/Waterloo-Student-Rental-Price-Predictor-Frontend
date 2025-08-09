@@ -268,7 +268,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="sqft">Square Footage</label>
+                    <label for="sqft">Room Square Footage</label>
                     <input type="number" id="sqft" placeholder="e.g. 900 or 0 if unsure">
                 </div>
             </div>
@@ -295,16 +295,15 @@
             
             <div id="anomalyCheck" style="margin-top: 20px;"></div>
             
-            <h3 style="margin-top: 30px;">Key Insights</h3>
+            <h3 style="margin-top: 30px;">Key Insights Based On Waterloo Properties)</h3>
             <ul class="explanation-list" id="explanationList"></ul>
             
             <div style="margin-top: 30px; padding: 15px; background-color: #f0f8ff; border-radius: 5px;">
                 <h3><i class="fas fa-lightbulb"></i> How This Works</h3>
-                <p>Our system compares your listing against thousands of similar properties, checking for:</p>
                 <ul>
-                    <li>Price consistency with comparable units</li>
-                    <li>Feature anomalies (unusual room/bath ratios, etc.)</li>
-                    <li>Market expectations for amenities</li>
+                    <li>Uses a trained XGBoost model to predict fair rental price based on key property features</li>
+                    <li>Applies Isolation Forest anomaly detection to identify outliers in room/bath ratios and feature combinations</li>
+                    <li>Incorporates rule-based checks for amenity inconsistencies reflecting student housing norms in Waterloo</li>
                 </ul>
             </div>
         </div>
